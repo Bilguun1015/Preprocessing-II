@@ -356,3 +356,14 @@ img {
     background-color: #17A2B8;
   }
 }
+.home .content-pick .destination .btn a {
+  text-decoration: none;
+  color: white;
+}
+.form {
+  border: 1px solid black;
+  font-size: 2rem;
+}
+header img {
+  width: 90%;
+}
