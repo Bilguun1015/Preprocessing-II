@@ -7,19 +7,37 @@
     display: flex;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
+    
+    @media @mobile{
+        .layout-500px-margin();
+        .layout-500px-makerow(column, center);
+    }
+
     h1{
         .border-mixin();
+        @media @mobile{
+            font-size: 3rem;
+            padding-bottom: 1.5rem;
+        }
     }
     nav{
         width: 80%;
         display:flex;
         text-align: center;
+        @media @mobile{
+            width: 100%;
+            margin: 0 auto;
+        }
         a{
             .border-mixin();
             font-size: 1.5rem;
             text-decoration: none;
             color: black;
             margin: auto;
+            cursor: pointer;
+            &:hover{
+                color: lighten(black,50%);
+            }
         }
     }
 }

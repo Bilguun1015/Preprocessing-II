@@ -7,4 +7,25 @@
     background: teal;
     font-size: 2rem;
     border-radius: 1.5rem;
+    cursor: pointer; 
+
+    &:hover{
+        background-color: darken(teal, 10%)
+    }
+    @media @mobile{
+        width: 100%;
+        background-color: @button-bg;
+    }     
 }
+
+.layout-500px-margin(){
+    width:90%;
+    margin: 0 auto;
+}
+
+.layout-500px-makerow(@direction, @center){
+    flex-direction: @direction;
+    text-align: @center;
+}
+
+
