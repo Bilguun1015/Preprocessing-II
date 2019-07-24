@@ -1,37 +1,76 @@
+.line(){
+  margin-left: auto;
+  width: 100%;
+  border-bottom: 2px dashed silver;
+}
 .home {
+  header{
+    .top-line{
+      margin-left: -160px;
+      width: 140%;
+      border-top: 0.2rem dashed silver;
+    }
+    img{
+      display: flex;
+      width: 100%;
+      padding-bottom: 2rem;
+      @media @mobile{
+        .layout-500px-margin();
+      }
+    }
+    .text-content{
+      padding-bottom: 1rem;
+      .line();
+      @media @mobile{
+        .layout-500px-margin();
+      }
+    }
+  }
+
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
-
+      @media @mobile{
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+        }
+      }
+    
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile{
+        width: 90%;
+        margin: 0 auto;
+      }
+     }
       img {
         border-radius: 10px;
       }
-    }
+    
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
     .text-content {
       padding-left: 1%;
       padding-right: 0;
     }
-
+    
+    @media @mobile{
+        flex-direction: column-reverse;
+        margin: 0 auto;
+      
+    }
     .img-content {
       padding-right: 1%;
       padding-left: 0;
@@ -45,6 +84,10 @@
     img {
       border-radius: 10px;
     }
+    @media @mobile{
+      padding-top: 3rem;
+      width:90%;
+    }
   }
 
   .content-pick {
@@ -52,10 +95,27 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile{
+      width: 90%;
+      flex-direction: column;
+      margin: 0 auto;
+      } 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      .btn{
+        .button();
+        a{
+          text-decoration: none;
+          color:white;
+        }
+      }
     }
+   
   }
 }// home
